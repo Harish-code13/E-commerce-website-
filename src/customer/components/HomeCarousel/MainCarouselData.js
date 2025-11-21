@@ -1,0 +1,22 @@
+export const MainCarouselData =[
+    {
+        image:"https://cdn.shopify.com/s/files/1/0596/8514/2681/files/pexels-gustavo-fring-4127632.jpg?v=1676622377",
+        path:"/women/clothing/lengha_choli"
+    },
+    {
+        image:"https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D",
+        path:"/women/clothing/lengha_dress"
+    },
+    {
+        image:"https://media.timeout.com/images/100515315/image.jpg",
+        path:"/women/clothing/lengha_dress"
+    },
+    {
+        image:"https://mahezon.in/cdn/shop/files/Navratri_Garba_Embroidery_Black_Women_Lehenga_Blouse_1200x1200.jpg?v=1755515959",
+        path:"/women/clothing/lengha_lengha"
+    },
+    {
+        image:"https://www.realsimple.com/thmb/nhz6VVo0LneAzbCSYNPbDnzJHXI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/editor-loved-spring-clothes-weekend-deals-33290f1f2853432e91c9bc956aa020e6.jpg",
+        path:"/women/clothing/lengha_lengha"
+    }
+]

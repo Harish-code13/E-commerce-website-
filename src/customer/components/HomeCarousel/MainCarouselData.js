@@ -1,22 +1,22 @@
 export const MainCarouselData =[
     {
-        image:"https://cdn.shopify.com/s/files/1/0596/8514/2681/files/pexels-gustavo-fring-4127632.jpg?v=1676622377",
+        image:"https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/wedding-wear-for-men.jpg",
         path:"/women/clothing/lengha_choli"
     },
     {
-        image:"https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D",
+        image:"https://cdn.shopify.com/s/files/1/0601/1476/4025/files/Business-Casual-Attire.jpg?v=1720502943",
         path:"/women/clothing/lengha_dress"
     },
     {
-        image:"https://media.timeout.com/images/100515315/image.jpg",
+        image:"https://manofmany.com/_next/image?url=https%3A%2F%2Fapi.manofmany.com%2Fwp-content%2Fuploads%2F2023%2F07%2FSmart-Casual-Mens-Dress-Code-Guide.jpg&w=1200&q=75",
         path:"/women/clothing/lengha_dress"
     },
     {
-        image:"https://mahezon.in/cdn/shop/files/Navratri_Garba_Embroidery_Black_Women_Lehenga_Blouse_1200x1200.jpg?v=1755515959",
+        image:"https://www.wikihow.com/images/e/ed/What-Clothes-Do-Girls-Like-on-Guys-Step-16-Version-3.jpg",
         path:"/women/clothing/lengha_lengha"
     },
     {
-        image:"https://www.realsimple.com/thmb/nhz6VVo0LneAzbCSYNPbDnzJHXI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/editor-loved-spring-clothes-weekend-deals-33290f1f2853432e91c9bc956aa020e6.jpg",
+        image:"https://cdn.shopify.com/s/files/1/0080/4844/3455/files/456.jpg?v=1640019095",
         path:"/women/clothing/lengha_lengha"
     }
 ]

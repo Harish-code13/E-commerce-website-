@@ -291,8 +291,8 @@ export default function Navigation() {
                   <span className="sr-only">Your Company</span>
                   <img
                     alt=""
-                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                    className="h-8 w-auto"
+                    src="https://img.freepik.com/premium-vector/h-logo-design-english-letter-h-logo-design_135595-1403.jpg"
+                    className="h-10 w-auto"
                   />
                 </a>
               </div>
@@ -381,11 +381,11 @@ export default function Navigation() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                  
                   </a>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Create account
+                  
                   </a>
                 </div>
 

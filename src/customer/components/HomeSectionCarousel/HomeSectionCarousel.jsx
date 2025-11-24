@@ -16,7 +16,7 @@ const HomeSectionCarousel = ({ sectionName = "", Data }) => {
   // make `data` safe when Data prop is not provided
   const data = Array.isArray(Data) && Data.length ? Data : mens_kurta;
 
-  const items = data.slice(0, 10).map((item, idx) => (
+  const items = data.slice(0, 15).map((item, idx) => (
     <HomeSectionCard key={item.id || idx} product={item} />
   ));
 

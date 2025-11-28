@@ -1,0 +1,22 @@
+export const MainCarouselData =[
+    {
+        image:"https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/wedding-wear-for-men.jpg",
+        path:"/women/clothing/lengha_choli"
+    },
+    {
+        image:"https://cdn.shopify.com/s/files/1/0601/1476/4025/files/Business-Casual-Attire.jpg?v=1720502943",
+        path:"/women/clothing/lengha_dress"
+    },
+    {
+        image:"https://manofmany.com/_next/image?url=https%3A%2F%2Fapi.manofmany.com%2Fwp-content%2Fuploads%2F2023%2F07%2FSmart-Casual-Mens-Dress-Code-Guide.jpg&w=1200&q=75",
+        path:"/women/clothing/lengha_dress"
+    },
+    {
+        image:"https://www.wikihow.com/images/e/ed/What-Clothes-Do-Girls-Like-on-Guys-Step-16-Version-3.jpg",
+        path:"/women/clothing/lengha_lengha"
+    },
+    {
+        image:"https://cdn.shopify.com/s/files/1/0080/4844/3455/files/456.jpg?v=1640019095",
+        path:"/women/clothing/lengha_lengha"
+    }
+]

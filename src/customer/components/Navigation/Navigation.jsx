@@ -16,67 +16,10 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Navigate } from 'react-router-dom'
 
 const navigation = {
   categories: [
-    {
-      id: 'women',
-      name: 'Women',
-      featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Basic Tees',
-          href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-      ],
-      sections: [
-        {
-          id: 'clothing',
-          name: 'Clothing',
-          items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Dresses', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Denim', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
-          ],
-        },
-        {
-          id: 'accessories',
-          name: 'Accessories',
-          items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
-          ],
-        },
-      ],
-    },
     {
       id: 'men',
       name: 'Men',
@@ -101,13 +44,13 @@ const navigation = {
           id: 'clothing',
           name: 'Clothing',
           items: [
-            { name: 'Tops', href: '#' },
+            { name: 'Tops', href: 'mens_kurta' },
             { name: 'Pants', href: '#' },
             { name: 'Sweaters', href: '#' },
             { name: 'T-Shirts', href: '#' },
             { name: 'Jackets', href: '#' },
             { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            
           ],
         },
         {
@@ -144,6 +87,14 @@ const navigation = {
 export default function Navigation() {
   const [open, setOpen] = useState(false)
 
+  const handleCategoryClick = (categoryName) => {
+    window.location.href = `/product?category=${categoryName.toLowerCase()}`;
+  }
+
+  const handleDetailedNavigation = (category, section, item) => {
+    window.location.href = `/${category.id}/${section.id}/${item.name.toLowerCase()}`;
+  }
+
   return (
     <div className="bg-white">
       {/* Mobile menu */}
@@ -176,6 +127,7 @@ export default function Navigation() {
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
+                      onClick={() => handleCategoryClick(category.name)}
                       className="flex-1 border-b-2 border-transparent px-1 py-4 text-base font-medium whitespace-nowrap text-gray-900 data-selected:border-indigo-600 data-selected:text-indigo-600"
                     >
                       {category.name}
@@ -194,7 +146,7 @@ export default function Navigation() {
                             src={item.imageSrc}
                             className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
                           />
-                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                          <a onClick={() => handleCategoryClick(category.name)} href="#" className="mt-6 block font-medium text-gray-900">
                             <span aria-hidden="true" className="absolute inset-0 z-10" />
                             {item.name}
                           </a>
@@ -216,7 +168,7 @@ export default function Navigation() {
                         >
                           {section.items.map((item) => (
                             <li key={item.name} className="flow-root">
-                              <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                              <a onClick={() => handleCategoryClick(item.name)} href="#" className="-m-2 block p-2 text-gray-500">
                                 {item.name}
                               </a>
                             </li>
@@ -241,6 +193,11 @@ export default function Navigation() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
+                <a onClick={()=>Navigate("/account/order")} href="/account/order" className="-m-2 block p-2 font-medium text-gray-900">
+                  My Orders
+                </a>
+              </div>
+              <div className="flow-root">
                 <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
                   Sign in
                 </a>
@@ -259,7 +216,7 @@ export default function Navigation() {
                   src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg"
                   className="block h-auto w-5 shrink-0"
                 />
-                <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                <span className="ml-3 block text-base font-medium text-gray-900">ind</span>
                 <span className="sr-only">, change currency</span>
               </a>
             </div>
@@ -322,13 +279,13 @@ export default function Navigation() {
                             <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                               <div className="col-start-2 grid grid-cols-2 gap-x-8">
                                 {category.featured.map((item) => (
-                                  <div key={item.name} className="group relative text-base sm:text-sm">
+                                  <div key={item.name} className="group relative text-sm">
                                     <img
                                       alt={item.imageAlt}
                                       src={item.imageSrc}
                                       className="aspect-square w-full rounded-lg bg-gray-100 object-cover group-hover:opacity-75"
                                     />
-                                    <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                    <a onClick={() => handleCategoryClick(category.name)} href="#" className="mt-6 block font-medium text-gray-900">
                                       <span aria-hidden="true" className="absolute inset-0 z-10" />
                                       {item.name}
                                     </a>
@@ -351,7 +308,7 @@ export default function Navigation() {
                                     >
                                       {section.items.map((item) => (
                                         <li key={item.name} className="flex">
-                                          <a href={item.href} className="hover:text-gray-800">
+                                          <a onClick={() => handleCategoryClick(item.name)} href="#" className="hover:text-gray-800">
                                             {item.name}
                                           </a>
                                         </li>
@@ -380,13 +337,25 @@ export default function Navigation() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                  
-                  </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                  
-                  </a>
+                  <Popover className="relative">
+                    <PopoverButton className="text-sm font-medium text-gray-700 hover:text-gray-800 flex items-center">
+                      Account
+                      <span aria-hidden="true" className="ml-1">▼</span>
+                    </PopoverButton>
+                    <PopoverPanel className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-50">
+                      <div className="py-1">
+                        <a href="/account/order" className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                          My Orders
+                        </a>
+                        <a href="#" className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                          Profile
+                        </a>
+                        <a href="#" className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                          Login
+                        </a>
+                      </div>
+                    </PopoverPanel>
+                  </Popover>
                 </div>
 
                 {/* Search */}

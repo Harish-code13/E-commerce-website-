@@ -1,0 +1,9 @@
+.ProductCard .textPart{
+    transition: transform 0.3s ease-out;
+}
+.ProductCard:hover .textPart{
+    transform: translateY(-1rem);
+}
+.ProductCard:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

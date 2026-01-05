@@ -5,10 +5,7 @@ import jdk.jfr.Category;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class Product {
@@ -63,5 +60,60 @@ public class Product {
 
     private LocalDateTime createdAt;
 
+    public static Collection<Object> getSizes() {
+        return List.of();
+    }
+    
 
+
+    public void setTitle(String title) {
+    }
+
+    public void setColor(String color) {
+    }
+
+    public void setDescription(String description) {
+    }
+
+    public void setDiscountPrice(int discountPrice) {
+    }
+
+    public void setDiscountPersent(int discountPersent) {
+    }
+
+    public void setImageUrl(String imageUrl) {
+    }
+
+    public void setBrand(String brand) {
+    }
+
+    public void setPrice(int price) {
+    }
+
+    public void setSizes(Set<Size> sizes) {
+    }
+
+    public void setQuantity(int quantity) {
+    }
+
+    public void setCategory(com.shop.model.Category thirdLevel) {
+    }
+
+    public void setCreated(LocalDateTime now) {
+    }
+
+    public int getQuantity() {
+        return 0;
+    }
+
+    public String getColor() {
+        return "";
+    }
+
+    public Integer getPrice() {
+        return null;
+    }
+    public Integer getDiscountedPrice(){
+        return null;
+    }
 }

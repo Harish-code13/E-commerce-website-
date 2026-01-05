@@ -156,4 +156,8 @@ public class User {
         this.review = review;
         this.createdAt = createdAt;
     }
+
+    public <E> List getAddress() {
+        return null;
+    }
 }

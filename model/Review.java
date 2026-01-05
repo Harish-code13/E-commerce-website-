@@ -30,10 +30,19 @@ public class Review {
     }
 
     public Review(String review, Product product, User user, LocalDateTime createdAt, Long id) {
-        this.review = review;
-        Product = product;
-        this.user = user;
-        this.createdAt = createdAt;
-        this.id = id;
+        
+    }
+
+    public void setUser(User user) {
+    }
+
+    public void setProduct(Product product) {
+    }
+
+    public void setReview(String review) {
+    }
+
+    public void setCreatedAt(LocalDateTime now) {
+
     }
 }

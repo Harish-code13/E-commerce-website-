@@ -3,13 +3,6 @@ package com.shop.service;
 import com.shop.exception.UserException;
 import com.shop.model.User;
 
-public class UserService {
-
-    public User findUserById(Long userId) throws UserException {
-        return null;
-    }
-
-    public User findUserProfileByjwt(String jwt) throws UserException {
-        return null;
-    }
+public interface UserService {
+    User findUserById(Long userId) throws UserException;
 }

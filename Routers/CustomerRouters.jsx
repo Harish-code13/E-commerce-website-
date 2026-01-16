@@ -9,27 +9,35 @@ import ProductDetails from "../customer/components/ProductDetails/ProductDetails
 import Checkout from "../customer/components/Checkout/Checkout";
 import Order from "../customer/components/Order/Order";
 import OrderDetails from "../customer/components/Order/OrderDetails";
+import LoginForm from "../customer/Auth/LoginForm";
+import RegisterForm from "../customer/Auth/RegisterForm";
+import PaymentSuccess from "../customer/components/payment/PaymentSuccess";
+
 
 const CustomerRouters = () => {
-    return (
-        <div>
-            <div>
-                <Navigation />
-            </div>
+  return (
+    <div>
+      <Navigation />
 
-            <Routes>
-                <Route path="/HomePage" element={<HomePage />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/:levelOne/:leveltwo/:levelthree" element={<Product />} />
-                <Route path="/Product/:ProductId" element={<ProductDetails />} />
-                <Route path="/Checkout" element={<Checkout />} />
-                <Route path="/account/order" element={<Order />} />
-                <Route path="/account/order/orderId" element={<OrderDetails />} />
-            </Routes>
-            <div>
-                <Footer />
-            </div>
-        </div>
-    )
-}
-export default CustomerRouters
+      <Routes>
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/:levelOne/:levelTwo/:levelThree" element={<Product />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/account/order" element={<Order />} />
+        <Route path="/account/order/:orderId" element={<OrderDetails />} />
+        <Route path="/payment/success/:orderId" element={<PaymentSuccess />} />
+      </Routes>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default CustomerRouters;
